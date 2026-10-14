@@ -1,0 +1,114 @@
+4300
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\li195\cf1\f0\fs20 LDA 4520h
+\par MOV E A
+\par MVI D 00h
+\par LDA 4521h
+\par MOV C A
+\par LXI H 0000h
+\par ORA A
+\par JZ MUL_STORE
+\par MUL_LOOP: DAD D
+\par DCR C
+\par JNZ MUL_LOOP
+\par MUL_STORE: SHLD 4522h
+\par 
+\par LDA 4525h
+\par MOV B A
+\par MOV A B
+\par ORA A
+\par JZ DIV_ZERO
+\par LDA 4524h
+\par MVI C 00h
+\par DIV_LOOP: CMP B
+\par JC DIV_DONE
+\par SUB B
+\par INR C
+\par JMP DIV_LOOP
+\par DIV_DONE: STA 4527h
+\par MOV A C
+\par STA 4526h
+\par HLT
+\par DIV_ZERO: MVI A FFh
+\par STA 4526h
+\par HLT
+\par \cf0 
+\par }
+<End Codes>
+20
+1| 4520| 12
+2| 4521| 05
+3| 4522| 5A
+4| 4523| 00
+5| 4524| 00
+6| 4525| 00
+7| 4526| FF
+8| 4527| 00
+<End UserData>
+1098
+1| 4300| 3A
+2| 4301| 20
+3| 4302| 45
+4| 4303| 5F
+5| 4304| 16
+6| 4305| 00
+7| 4306| 3A
+8| 4307| 21
+9| 4308| 45
+10| 4309| 4F
+11| 430A| 21
+12| 430B| 00
+13| 430C| 00
+14| 430D| B7
+15| 430E| CA
+16| 430F| 16
+17| 4310| 43
+18| 4311| 19
+19| 4312| 0D
+20| 4313| C2
+21| 4314| 11
+22| 4315| 43
+23| 4316| 22
+24| 4317| 22
+25| 4318| 45
+26| 4319| 3A
+27| 431A| 25
+28| 431B| 45
+29| 431C| 47
+30| 431D| 78
+31| 431E| B7
+32| 431F| CA
+33| 4320| 38
+34| 4321| 43
+35| 4322| 3A
+36| 4323| 24
+37| 4324| 45
+38| 4325| 0E
+39| 4326| 00
+40| 4327| B8
+41| 4328| DA
+42| 4329| 30
+43| 432A| 43
+44| 432B| 90
+45| 432C| 0C
+46| 432D| C3
+47| 432E| 27
+48| 432F| 43
+49| 4330| 32
+50| 4331| 27
+51| 4332| 45
+52| 4333| 79
+53| 4334| 32
+54| 4335| 26
+55| 4336| 45
+56| 4337| 76
+57| 4338| 3E
+58| 4339| FF
+59| 433A| 32
+60| 433B| 26
+61| 433C| 45
+62| 433D| 76
+<End HexData>
+
+<End Comment>

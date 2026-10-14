@@ -1,0 +1,165 @@
+4400
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\li195\cf1\f0\fs20 LXI SP 47FFh
+\par LHLD 4532h
+\par XCHG
+\par LHLD 4530h
+\par MOV B H
+\par MOV C L
+\par LXI H 0000h
+\par SHLD 4536h
+\par MOV A B
+\par ORA C
+\par JZ MUL16_STORE
+\par MUL16_LOOP: DAD D
+\par JNC MUL16_NO_CARRY
+\par PUSH H
+\par LHLD 4536h
+\par INX H
+\par SHLD 4536h
+\par POP H
+\par MUL16_NO_CARRY: DCX B
+\par MOV A B
+\par ORA C
+\par JNZ MUL16_LOOP
+\par MUL16_STORE: SHLD 4534h
+\par 
+\par LHLD 453Ah
+\par MOV A H
+\par ORA L
+\par JZ DIV16_ZERO
+\par XCHG
+\par LHLD 4538h
+\par LXI B 0000h
+\par DIV16_LOOP: MOV A L
+\par SUB E
+\par MOV L A
+\par MOV A H
+\par SBB D
+\par MOV H A
+\par JC DIV16_DONE
+\par INX B
+\par JMP DIV16_LOOP
+\par DIV16_DONE: DAD D
+\par SHLD 453Eh
+\par MOV H B
+\par MOV L C
+\par SHLD 453Ch
+\par HLT
+\par DIV16_ZERO: MVI A FFh
+\par STA 4540h
+\par HLT\cf0 
+\par }
+<End Codes>
+20
+1| 4530| 12
+2| 4531| 34
+3| 4532| 56
+4| 4533| 78
+5| 4534| 0C
+6| 4535| EE
+7| 4536| 79
+8| 4537| 18
+9| 4538| 00
+10| 4539| 00
+11| 453A| 00
+12| 453B| 00
+13| 453C| 00
+14| 453D| 00
+15| 453E| 00
+16| 453F| 00
+<End UserData>
+444
+1| 4400| 31
+2| 4401| FF
+3| 4402| 47
+4| 4403| 2A
+5| 4404| 32
+6| 4405| 45
+7| 4406| EB
+8| 4407| 2A
+9| 4408| 30
+10| 4409| 45
+11| 440A| 44
+12| 440B| 4D
+13| 440C| 21
+14| 440D| 00
+15| 440E| 00
+16| 440F| 22
+17| 4410| 36
+18| 4411| 45
+19| 4412| 78
+20| 4413| B1
+21| 4414| CA
+22| 4415| 2A
+23| 4416| 44
+24| 4417| 19
+25| 4418| D2
+26| 4419| 24
+27| 441A| 44
+28| 441B| E5
+29| 441C| 2A
+30| 441D| 36
+31| 441E| 45
+32| 441F| 23
+33| 4420| 22
+34| 4421| 36
+35| 4422| 45
+36| 4423| E1
+37| 4424| 0B
+38| 4425| 78
+39| 4426| B1
+40| 4427| C2
+41| 4428| 17
+42| 4429| 44
+43| 442A| 22
+44| 442B| 34
+45| 442C| 45
+46| 442D| 2A
+47| 442E| 3A
+48| 442F| 45
+49| 4430| 7C
+50| 4431| B5
+51| 4432| CA
+52| 4433| 53
+53| 4434| 44
+54| 4435| EB
+55| 4436| 2A
+56| 4437| 38
+57| 4438| 45
+58| 4439| 01
+59| 443A| 00
+60| 443B| 00
+61| 443C| 7D
+62| 443D| 93
+63| 443E| 6F
+64| 443F| 7C
+65| 4440| 9A
+66| 4441| 67
+67| 4442| DA
+68| 4443| 49
+69| 4444| 44
+70| 4445| 03
+71| 4446| C3
+72| 4447| 3C
+73| 4448| 44
+74| 4449| 19
+75| 444A| 22
+76| 444B| 3E
+77| 444C| 45
+78| 444D| 60
+79| 444E| 69
+80| 444F| 22
+81| 4450| 3C
+82| 4451| 45
+83| 4452| 76
+84| 4453| 3E
+85| 4454| FF
+86| 4455| 32
+87| 4456| 40
+88| 4457| 45
+89| 4458| 76
+<End HexData>
+
+<End Comment>

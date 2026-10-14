@@ -1,0 +1,95 @@
+0000
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\li195\cf1\f0\fs20 LXI SP 47FFh
+\par LXI H 4500h
+\par MOV A M
+\par INX H
+\par MOV B M
+\par 
+\par ADD B
+\par PUSH PSW
+\par STA 4502h
+\par MVI A 00h
+\par ACI 00h
+\par STA 4503h
+\par POP H
+\par MOV A L
+\par STA 4504h
+\par 
+\par LDA 4500h
+\par SUB B
+\par PUSH PSW
+\par STA 4505h
+\par MVI A 00h
+\par ACI 00h
+\par STA 4506h
+\par POP H
+\par MOV A L
+\par STA 4507h
+\par 
+\par HLT
+\par \cf0 
+\par }
+<End Codes>
+20
+1| 4500| 05
+2| 4501| 04
+3| 4502| 09
+4| 4503| 00
+5| 4504| 04
+6| 4505| 01
+7| 4506| 00
+8| 4507| 10
+<End UserData>
+580
+1| 0000| 31
+2| 0001| FF
+3| 0002| 47
+4| 0003| 21
+5| 0004| 00
+6| 0005| 45
+7| 0006| 7E
+8| 0007| 23
+9| 0008| 46
+10| 0009| 80
+11| 000A| F5
+12| 000B| 32
+13| 000C| 02
+14| 000D| 45
+15| 000E| 3E
+16| 000F| 00
+17| 0010| CE
+18| 0011| 00
+19| 0012| 32
+20| 0013| 03
+21| 0014| 45
+22| 0015| E1
+23| 0016| 7D
+24| 0017| 32
+25| 0018| 04
+26| 0019| 45
+27| 001A| 3A
+28| 001B| 00
+29| 001C| 45
+30| 001D| 90
+31| 001E| F5
+32| 001F| 32
+33| 0020| 05
+34| 0021| 45
+35| 0022| 3E
+36| 0023| 00
+37| 0024| CE
+38| 0025| 00
+39| 0026| 32
+40| 0027| 06
+41| 0028| 45
+42| 0029| E1
+43| 002A| 7D
+44| 002B| 32
+45| 002C| 07
+46| 002D| 45
+47| 002E| 76
+<End HexData>
+
+<End Comment>

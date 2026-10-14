@@ -1,0 +1,143 @@
+4100
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\li195\cf1\f0\fs20 LXI SP 47FFh
+\par LXI H 4500h
+\par MOV A M
+\par INX H
+\par MOV B M
+\par ANA B
+\par PUSH PSW
+\par STA 4502h
+\par POP H
+\par MOV A L
+\par STA 4509h
+\par LDA 4500h
+\par ORA B
+\par STA 4503h
+\par LDA 4500h
+\par XRA B
+\par STA 4504h
+\par LDA 4500h
+\par ANI 0Fh
+\par STA 4505h
+\par LDA 4500h
+\par ANI F0h
+\par STA 4506h
+\par LDA 4500h
+\par CMA
+\par STA 4507h
+\par INR A
+\par STA 4508h
+\par LHLD 450Ah
+\par MOV A L
+\par CMA
+\par MOV L A
+\par MOV A H
+\par CMA
+\par MOV H A
+\par SHLD 450Ch
+\par INX H
+\par SHLD 450Eh
+\par HLT\cf0 
+\par }
+<End Codes>
+20
+1| 4500| A7
+2| 4501| 3C
+3| 4502| 24
+4| 4503| BF
+5| 4504| 9B
+6| 4505| 07
+7| 4506| A0
+8| 4507| 58
+9| 4508| 59
+10| 4509| 14
+11| 450A| 34
+12| 450B| 12
+13| 450C| CB
+14| 450D| ED
+15| 450E| CC
+16| 450F| ED
+<End UserData>
+78
+1| 4100| 31
+2| 4101| FF
+3| 4102| 47
+4| 4103| 21
+5| 4104| 00
+6| 4105| 45
+7| 4106| 7E
+8| 4107| 23
+9| 4108| 46
+10| 4109| A0
+11| 410A| F5
+12| 410B| 32
+13| 410C| 02
+14| 410D| 45
+15| 410E| E1
+16| 410F| 7D
+17| 4110| 32
+18| 4111| 09
+19| 4112| 45
+20| 4113| 3A
+21| 4114| 00
+22| 4115| 45
+23| 4116| B0
+24| 4117| 32
+25| 4118| 03
+26| 4119| 45
+27| 411A| 3A
+28| 411B| 00
+29| 411C| 45
+30| 411D| A8
+31| 411E| 32
+32| 411F| 04
+33| 4120| 45
+34| 4121| 3A
+35| 4122| 00
+36| 4123| 45
+37| 4124| E6
+38| 4125| 0F
+39| 4126| 32
+40| 4127| 05
+41| 4128| 45
+42| 4129| 3A
+43| 412A| 00
+44| 412B| 45
+45| 412C| E6
+46| 412D| F0
+47| 412E| 32
+48| 412F| 06
+49| 4130| 45
+50| 4131| 3A
+51| 4132| 00
+52| 4133| 45
+53| 4134| 2F
+54| 4135| 32
+55| 4136| 07
+56| 4137| 45
+57| 4138| 3C
+58| 4139| 32
+59| 413A| 08
+60| 413B| 45
+61| 413C| 2A
+62| 413D| 0A
+63| 413E| 45
+64| 413F| 7D
+65| 4140| 2F
+66| 4141| 6F
+67| 4142| 7C
+68| 4143| 2F
+69| 4144| 67
+70| 4145| 22
+71| 4146| 0C
+72| 4147| 45
+73| 4148| 23
+74| 4149| 22
+75| 414A| 0E
+76| 414B| 45
+77| 414C| 76
+<End HexData>
+
+<End Comment>
